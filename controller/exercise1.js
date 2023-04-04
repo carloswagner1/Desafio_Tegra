@@ -6,7 +6,11 @@ export const ExerciseOneComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
+        event.preventDefault();
         const button = event.composedPath()[0].innerText;
+        if( button == 'Limpar'){
+            clear();
+        }
         if( button == 'Enviar'){
             const land_width = Number(document.getElementById('land_width').value);
             const land_length = Number(document.getElementById('land_length').value);

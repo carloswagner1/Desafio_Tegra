@@ -6,7 +6,11 @@ export const ExerciseThreeComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
+        event.preventDefault();
         const button = event.composedPath()[0].innerText;
+        if( button == 'Limpar'){
+            clear();
+        }
         if( button == 'Enviar'){
             const name1 = document.getElementById('name1').value;
             const name2 = document.getElementById('name2').value;

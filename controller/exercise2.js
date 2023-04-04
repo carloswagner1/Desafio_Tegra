@@ -6,7 +6,11 @@ export const ExerciseTwoComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
+        event.preventDefault();
         const button = event.composedPath()[0].innerText;
+        if( button == 'Limpar'){
+            clear();
+        }
         if( button == 'Enviar'){
             const rectangle_base = Number(document.getElementById('rectangle_base').value);
             const rectangle_height = Number(document.getElementById('rectangle_height').value);
