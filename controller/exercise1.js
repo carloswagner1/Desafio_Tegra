@@ -7,26 +7,32 @@ export const ExerciseOneComponent = () => {
 
     main.addEventListener('click', (event) => {
         const button = event.composedPath()[0].innerText;
-        if( button == 'Limpar'){
+        if( button == 'Enviar'){
+            const land_width = Number(document.getElementById('land_width').value);
+            const land_length = Number(document.getElementById('land_length').value);
+            const priceSquareMeter = document.getElementById('square_meter_value').value;
 
-        }
-        if( button == 'Calcular'){
-            document.getElementById('total-area').value = CalculateArea().toFixed(2);
-            document.getElementById('total-value').value = CalculateTotalValue().toFixed(2);
+            if(land_length == '' || land_width == '' || priceSquareMeter == ''){
+                alert('Todos os campos devem ser preenchidos');
+                return;
+            }
+
+            const area = CalculateArea(land_length, land_width);
+            const totalValue = CalculateTotalValue(area, priceSquareMeter)
+
+            document.getElementById('total-area').value = area.toFixed(2);
+            document.getElementById('total-value').value = totalValue.toFixed(2);
             clear();
         }
     })
-
-
 }
-function CalculateArea() {
-    const land_width = Number(document.getElementById('land_width').value);
-    const land_length = Number(document.getElementById('land_length').value);
+function CalculateArea(land_length, land_width) {
+
     return land_length * land_width;
 }
-function CalculateTotalValue() {
-    const priceSquareMeter = document.getElementById('square_meter_value').value;
-    return priceSquareMeter * CalculateArea();
+function CalculateTotalValue(area, priceSquareMeter) {
+
+    return priceSquareMeter * area;
 }
 function clear() {
     const form = document.getElementById('my-form');
