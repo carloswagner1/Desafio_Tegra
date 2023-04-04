@@ -1,0 +1,14 @@
+{
+  "name": "programa_jovens_tegranos",
+  "version": "1.0.0",
+  "description": "Lista de Exercícios de Lógica e Programação",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --file . --host --port 5500 --startPath index.html"
+  },
+  "author": "Carlos Wagner Rodrigues da Silva",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha3"
+  }
+}
