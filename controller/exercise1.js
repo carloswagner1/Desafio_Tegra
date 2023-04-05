@@ -12,16 +12,16 @@ export const ExerciseOneComponent = () => {
             clear();
         }
         if( button == 'ex1Enviar'){
-            const land_width = Number(document.getElementById('land_width').value);
-            const land_length = Number(document.getElementById('land_length').value);
+            const landWidth = Number(document.getElementById('land_width').value);
+            const landLength = Number(document.getElementById('land_length').value);
             const priceSquareMeter = document.getElementById('square_meter_value').value;
 
-            if(land_length == '' || land_width == '' || priceSquareMeter == ''){
+            if(landLength == '' || landWidth == '' || priceSquareMeter == ''){
                 alert('Todos os campos devem ser preenchidos');
                 return;
             }
 
-            const area = CalculateArea(land_length, land_width);
+            const area = CalculateArea(landLength, landWidth);
             const totalValue = CalculateTotalValue(area, priceSquareMeter)
 
             document.getElementById('total-area').value = area.toFixed(2);
@@ -30,9 +30,9 @@ export const ExerciseOneComponent = () => {
         }
     })
 }
-function CalculateArea(land_length, land_width) {
+function CalculateArea(landLength, landWidth) {
 
-    return land_length * land_width;
+    return landLength * landWidth;
 }
 function CalculateTotalValue(area, priceSquareMeter) {
 

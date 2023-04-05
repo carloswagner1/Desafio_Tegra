@@ -11,9 +11,13 @@ export const ExerciseFiveComponent = () => {
             clear();
         }
         if( button == 'Enviar') {
-            const circle_radius = document.getElementById('circle_radius').value;
+            const circleRadius = document.getElementById('circle_radius').value;
+            if(circleRadius == ''){
+                alert('Informe o valor do raio do círculo');
+                return;
+            }
             const circle_area = document.getElementById('circle_area');
-            circle_area.value = (3.14159 * (circle_radius ** 2)).toFixed(3);
+            circle_area.value = (3.14159 * (circleRadius ** 2)).toFixed(3);
             clear();
         }
     });

@@ -14,6 +14,10 @@ export const ExerciseSixComponent = () => {
             const employeeName = document.getElementById('employeeName').value;
             const hourSalary = document.getElementById('hourSalary').value;
             const amountHours = document.getElementById('amountHours').value;
+            if(employeeName == '' || hourSalary == '' || amountHours==''){
+                alert('Todos os dados devem ser preenchidos');
+                return;
+            }
             const salary = hourSalary * amountHours;
             const message = document.getElementById('ex6Message');
             message.innerHTML = `O pagamento para ${employeeName} deve ser de R$ ${salary.toFixed(2)}`;

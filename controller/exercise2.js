@@ -12,18 +12,18 @@ export const ExerciseTwoComponent = () => {
             clear();
         }
         if( button == 'ex2Enviar'){
-            const rectangle_base = Number(document.getElementById('rectangle_base').value);
-            const rectangle_height = Number(document.getElementById('rectangle_height').value);
-            if(rectangle_base ==  '' || rectangle_height == ''){
+            const rectangleBase = Number(document.getElementById('rectangle_base').value);
+            const rectangleHeight = Number(document.getElementById('rectangle_height').value);
+            if(rectangleBase ==  '' || rectangleHeight == ''){
                 alert("Todos os campos tem q ser preenchidos");
                 return;
             }
 
-            const area = CalculateArea(rectangle_base, rectangle_height);
+            const area = CalculateArea(rectangleBase, rectangleHeight);
 
-            const perimeter = CalculatePerimeter(rectangle_base, rectangle_height)
+            const perimeter = CalculatePerimeter(rectangleBase, rectangleHeight)
 
-            const diagonal = CalculateDiagonal(rectangle_base, rectangle_height)
+            const diagonal = CalculateDiagonal(rectangleBase, rectangleHeight)
 
             document.getElementById('retangleArea').value = area.toFixed(4);
             document.getElementById('perimeter').value = perimeter.toFixed(4);
@@ -32,14 +32,14 @@ export const ExerciseTwoComponent = () => {
         }
     })
 }
-function CalculateArea(rectangle_base, rectangle_height) {
-    return rectangle_base * rectangle_height;
+function CalculateArea(rectangleBase, rectangleHeight) {
+    return rectangleBase * rectangleHeight;
 }
-function CalculatePerimeter(rectangle_base, rectangle_height) {
-    return (rectangle_base + rectangle_height) * 2;
+function CalculatePerimeter(rectangleBase, rectangleHeight) {
+    return (rectangleBase + rectangleHeight) * 2;
 }
-function CalculateDiagonal(rectangle_base, rectangle_height){
-    return Math.sqrt((rectangle_base ** 2) + (rectangle_height ** 2))
+function CalculateDiagonal(rectangleBase, rectangleHeight){
+    return Math.sqrt((rectangleBase ** 2) + (rectangleHeight ** 2))
 }
 function clear() {
     const form = document.getElementById('my-form');
