@@ -1,7 +1,7 @@
-import { view } from "../view/index.js";
+import { exerciseFiveHtml } from "../view/exercisesView/exercise5View.js";
 
 export const ExerciseFiveComponent = () => {
-    view.exerciseFiveHtml();
+    exerciseFiveHtml();
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {

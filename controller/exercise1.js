@@ -1,17 +1,17 @@
-import { view } from "../view/index.js"
+import { exerciseOneHtml } from "../view/exercisesView/exercise1View.js"
 
 export const ExerciseOneComponent = () => {
-    view.exerciseOneHtml();
+    exerciseOneHtml();
 
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
         event.preventDefault();
-        const button = event.composedPath()[0].innerText;
+        const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
-        if( button == 'Enviar'){
+        if( button == 'ex1Enviar'){
             const land_width = Number(document.getElementById('land_width').value);
             const land_length = Number(document.getElementById('land_length').value);
             const priceSquareMeter = document.getElementById('square_meter_value').value;

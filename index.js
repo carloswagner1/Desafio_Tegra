@@ -3,6 +3,7 @@ import { ExerciseTwoComponent } from "./controller/exercise2.js";
 import { ExerciseThreeComponent } from "./controller/exercise3.js";
 import { ExerciseFourComponent } from "./controller/exercise4.js";
 import { ExerciseFiveComponent } from "./controller/exercise5.js";
+import { ExerciseSixComponent } from "./controller/exercise6.js";
 
 const link = document.getElementById('link');
 
@@ -24,6 +25,9 @@ link.addEventListener('click', (event) => {
             break;
         case 'Exercício 5':
             ExerciseFiveComponent();
+            break;
+        case 'Exercício 6':
+            ExerciseSixComponent();
             break;
     }
 

@@ -1,17 +1,17 @@
-import { view } from "../view/index.js"
+import { exerciseFourHtml } from "../view/exercisesView/exercise4View.js"
 
 export const ExerciseFourComponent = () => {
-    view.exerciseFourHtml();
+    exerciseFourHtml();
 
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
         event.preventDefault();
-        const button = event.composedPath()[0].innerText;
+        const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
-        if( button == 'Enviar') {
+        if( button == 'ex4Enviar') {
             const unit_value = document.getElementById('unit_value').value;
             const amount = document.getElementById('amount').value;
             const amount_received = document.getElementById('amount_received').value;

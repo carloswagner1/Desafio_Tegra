@@ -1,17 +1,17 @@
-import { view } from "../view/index.js"
+import { exerciseThreeHtml } from "../view/exercisesView/exercise3View.js"
 
 export const ExerciseThreeComponent = () => {
-    view.exerciseThreeHtml();
+    exerciseThreeHtml();
 
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
         event.preventDefault();
-        const button = event.composedPath()[0].innerText;
+        const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
-        if( button == 'Enviar'){
+        if( button == 'ex3Enviar'){
             const name1 = document.getElementById('name1').value;
             const name2 = document.getElementById('name2').value;
             const age1 = Number(document.getElementById('age1').value);

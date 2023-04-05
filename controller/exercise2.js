@@ -1,17 +1,17 @@
-import { view } from "../view/index.js"
+import { exerciseTwoHtml } from "../view/exercisesView/exercise2View.js"
 
 export const ExerciseTwoComponent = () => {
-    view.exerciseTwoHtml();
+    exerciseTwoHtml();
 
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
         event.preventDefault();
-        const button = event.composedPath()[0].innerText;
+        const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
-        if( button == 'Enviar'){
+        if( button == 'ex2Enviar'){
             const rectangle_base = Number(document.getElementById('rectangle_base').value);
             const rectangle_height = Number(document.getElementById('rectangle_height').value);
             if(rectangle_base ==  '' || rectangle_height == ''){
@@ -25,7 +25,7 @@ export const ExerciseTwoComponent = () => {
 
             const diagonal = CalculateDiagonal(rectangle_base, rectangle_height)
 
-            document.getElementById('total-area').value = area.toFixed(4);
+            document.getElementById('retangleArea').value = area.toFixed(4);
             document.getElementById('perimeter').value = perimeter.toFixed(4);
             document.getElementById('diagonal').value = diagonal.toFixed(4);
             clear();
