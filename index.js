@@ -8,6 +8,8 @@ import { ExerciseSevenComponent } from "./controller/exercise7.js";
 import { ExerciseEightComponent } from "./controller/exercise8.js";
 import { ExerciseNineComponent } from "./controller/exercise9.js";
 import { ExerciseTenComponent } from "./controller/exercise10.js";
+import { ExerciseElevenComponent } from "./controller/exercise11.js";
+import { ExerciseTwelveComponent } from "./controller/exercise12.js";
 
 const link = document.getElementById('link');
 
@@ -44,6 +46,12 @@ link.addEventListener('click', (event) => {
             break;
         case 'Exercício 10':
             ExerciseTenComponent();
+            break;
+        case 'Exercício 11':
+            ExerciseElevenComponent();
+            break;
+        case 'Exercício 12':
+            ExerciseTwelveComponent();
             break;
     }
 

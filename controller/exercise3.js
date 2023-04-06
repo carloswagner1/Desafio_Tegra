@@ -23,7 +23,7 @@ export const ExerciseThreeComponent = () => {
             }
             const average = CalculateAverage(age1, age2);
             const message = document.getElementById('message');
-            message.innerHTML = `A idade média de ${name1} e ${name2} é de ${average} anos`
+            message.innerHTML = `A idade média de ${name1} e ${name2} é de ${(average).toFixed(1)} anos`
             clear();
         }
     })
