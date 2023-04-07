@@ -25,7 +25,7 @@ export const ExerciseTwelveComponent = () => {
                 return;
             }
             if(A == 0){
-                alert('O valor de a deve ser diferente de zero');
+                alert('O valor do coeficiente "a" deve ser diferente de zero');
                 return;
             }
 

@@ -11,10 +11,10 @@ export const ExerciseTenComponent = () => {
             clear();
         }
         if( button == 'ex10Enviar') {
-            const value1 = Number(document.getElementById('value_1').value);
-            const value2 = Number(document.getElementById('value_2').value);
-            const value3 = Number(document.getElementById('value_3').value);
-            if(value1 == '' || value2 == '' || value3 == '' ){
+            const value1 = document.getElementById('value_1').value;
+            const value2 = document.getElementById('value_2').value;
+            const value3 = document.getElementById('value_3').value;
+            if(!value1 || !value2 || !value3  ){
                 alert('Todos os valores devem ser informados');
                 return;
             }
