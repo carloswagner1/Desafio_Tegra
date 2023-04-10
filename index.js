@@ -15,6 +15,10 @@ import { ExerciseFourteenComponent } from "./controller/exercise14.js";
 import { ExerciseFifteenComponent } from "./controller/exercise15.js";
 import { ExerciseSixteenComponent } from "./controller/exercise16.js";
 import { ExerciseSeventeenComponent } from "./controller/exercise17.js";
+import { ExerciseEighteenComponent } from "./controller/exercise18.js";
+import { ExerciseNineTeenComponent } from "./controller/exercise19.js";
+import { ExerciseTwentyComponent } from "./controller/exercise20.js";
+
 
 const link = document.getElementById('link');
 
@@ -73,9 +77,15 @@ link.addEventListener('click', (event) => {
         case 'Exercício 17':
             ExerciseSeventeenComponent();
             break;
-
+        case 'Exercício 18':
+            ExerciseEighteenComponent();
+            break;
+        case 'Exercício 19':
+            ExerciseNineTeenComponent();
+            break;
+        case 'Exercício 20':
+            ExerciseTwentyComponent();
+            break;
     }
-
-
 })
 

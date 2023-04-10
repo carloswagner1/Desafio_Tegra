@@ -12,13 +12,15 @@ p {
     padding: 0;
     width: 100%;
     max-width: none;
-  }
+}
 
-  .navbar-nav .dropdown-menu .row {
+.navbar-nav .dropdown-menu .row {
     display: flex;
     flex-wrap: nowrap;
-  }
+}
 
-  .navbar-nav .dropdown-menu .col-md-4 {
+.navbar-nav .dropdown-menu .col-md-4 {
     padding: 1rem;
-  }
+}
+
+

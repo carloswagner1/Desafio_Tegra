@@ -1,14 +1,15 @@
-export const exerciseSeventeenHtml = () => {
-    const main = document.getElementById('root');
+export const exerciseTwentyHtml = () => {
+
+const main = document.getElementById('root');
     const contentHtml = `
         <div class="container mt-3 w-50">
           <div class="card">
             <div class="card-header">
-              <h5 class="card-title">Exercício 17</h5>
+              <h5 class="card-title">Exercício 20</h5>
             </div>
             <div class="card-body">
               <p class="card-text ">
-                Fazer um programa para ler dois números inteiros, e dizer se um número é múltiplo do outro. Os números podem ser digitados em qualquer ordem.
+                  Escreva um programa que exiba a soma de todos os números compreendidos entre um intervalo dado pelo usuário.
               </p>
             </div>
           </div>
@@ -18,7 +19,7 @@ export const exerciseSeventeenHtml = () => {
             <div class="card-body" >
                 <form id="my-form">
                     <div class="input-group mt-3">
-                        <span class="input-group-text">Primeiro número: </span>
+                        <span class="input-group-text">Número inicial: </span>
                         <input
                           name="number1"
                           id="number_1"
@@ -28,7 +29,7 @@ export const exerciseSeventeenHtml = () => {
                         />
                     </div>
                     <div class="input-group mt-3">
-                        <span class="input-group-text">Segundo número: </span>
+                        <span class="input-group-text">Número final: </span>
                         <input
                           name="number2"
                           id="number_2"
@@ -39,7 +40,7 @@ export const exerciseSeventeenHtml = () => {
                     </div>
                     <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
                       <button type="reset" class="btn btn-danger" value="Limpar">Limpar</button>
-                      <button type="submit" class="btn btn-primary" value="ex17Enviar">Enviar</button>
+                      <button type="button" class="btn btn-primary" value="ex20Enviar">Enviar</button>
                     </div>
                 </form>
             </div>
