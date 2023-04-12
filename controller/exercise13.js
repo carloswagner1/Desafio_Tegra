@@ -5,16 +5,15 @@ export const ExerciseThirteenComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex13Enviar') {
-            const minutes = document.getElementById('spent_minutes').value;
+            const minutes = parseInt(document.getElementById('spent_minutes').value);
             var totalValue = document.getElementById('total_value');
 
-            if(!minutes){
+            if(Number.isNaN(minutes)){
                 alert('Insira a quantidades de minutos consumidos');
                 return;
             }

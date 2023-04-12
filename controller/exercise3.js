@@ -6,7 +6,6 @@ export const ExerciseThreeComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
@@ -14,10 +13,10 @@ export const ExerciseThreeComponent = () => {
         if( button == 'ex3Enviar'){
             const name1 = document.getElementById('name1').value;
             const name2 = document.getElementById('name2').value;
-            const age1 = Number(document.getElementById('age1').value);
-            const age2 = Number(document.getElementById('age2').value);
+            const age1 = parseInt(document.getElementById('age1').value);
+            const age2 = parseInt(document.getElementById('age2').value);
 
-            if(name1 == '' || name2 == "" || age1 == '' || age2==""){
+            if(!name1 || !name2 || Number.isNaN(age1) || Number.isNaN(age2)){
                 alert('Todos os campos devem ser preenchidos');
                 return;
             }

@@ -8,7 +8,7 @@ export const exerciseTwoHtml = () => {
             </div>
             <div class="card-body">
               <p class="card-text text-break">
-              Fazer um programa para ler as medidas da base e altura de um retângulo. Em seguida, mostrar o valor da área, perímetro e diagonal deste retângulo, com quatro casas decimais.
+                Fazer um programa para ler as medidas da base e altura de um retângulo. Em seguida, mostrar o valor da área, perímetro e diagonal deste retângulo, com quatro casas decimais.
               </p>
             </div>
           </div>

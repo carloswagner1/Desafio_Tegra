@@ -1,14 +1,14 @@
-export const exerciseNineHtml = () => {
+export const exerciseTwentyFiveHtml = () => {
     const main = document.getElementById('root');
     const contentHtml = `
         <div class="container mt-3 w-50">
           <div class="card">
             <div class="card-header">
-              <h5 class="card-title">Exercício 9</h5>
+              <h5 class="card-title">Exercício 25</h5>
             </div>
             <div class="card-body">
               <p class="card-text ">
-                Fazer um programa para ler uma duração de tempo em segundos, daí imprimir na tela esta duração no formato horas:minutos:segundos.
+                  Receber valores numéricos para o dia e o mês de nascimento de uma pessoa; Exibir o signo da pessoa.
               </p>
             </div>
           </div>
@@ -18,25 +18,32 @@ export const exerciseNineHtml = () => {
             <div class="card-body" >
               <form id="my-form">
                 <div class="input-group mt-3">
-                  <span class="input-group-text">Digite a duração em segundos: </span>
+                  <span class="input-group-text">Data de Nascimento: </span>
                   <input
-                    id="time_in_seconds"
-                    type="number"
-                    min="0"
+                    id="birthDate"
+                    type="text"
                     class="form-control"
-                    placeholder="0"
+                    placeholder="dd/mm"
                   />
                 </div>
-                <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
+                <div class="mt-3 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
                   <button type="reset" class="btn btn-danger" value="Limpar"> Limpar </button>
-                  <button type="BUTTON" class="btn btn-primary" value="ex9Enviar">Enviar</button>
+                  <button type="button" class="btn btn-primary" value="ex25Enviar">Enviar</button>
                 </div>
               </form>
             </div>
             <div class="card-footer text-body-secondary text-center">
-                <h1 id="ex9Message"></h1>
+                <div class="input-group">
+                    <span class="input-group-text">Signo: </span>
+                    <input
+                    id="sign"
+                    type="text"
+                    class="form-control"
+                    disabled
+                    />
+                </div>
             </div>
           </div>
     `
     main.innerHTML = contentHtml;
-  }
+}

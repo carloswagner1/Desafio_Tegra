@@ -36,7 +36,7 @@ export const ExerciseEighteenComponent = () => {
         if( button == 'ex18Enviar') {
             const temperature = parseFloat(form.temperature.value);
 
-            if(!temperature){
+            if(Number.isNaN(temperature)){
                 alert('Informe a temperatura');
                 return;
             }

@@ -1,14 +1,14 @@
-export const exerciseNineHtml = () => {
+export const exerciseThirtyHtml = () => {
     const main = document.getElementById('root');
     const contentHtml = `
         <div class="container mt-3 w-50">
           <div class="card">
             <div class="card-header">
-              <h5 class="card-title">Exercício 9</h5>
+              <h5 class="card-title">Exercício 30</h5>
             </div>
             <div class="card-body">
               <p class="card-text ">
-                Fazer um programa para ler uma duração de tempo em segundos, daí imprimir na tela esta duração no formato horas:minutos:segundos.
+                  Escreva um programa que receba um valor numérico de até dois algarismos e transcreva esse valor por extenso.
               </p>
             </div>
           </div>
@@ -18,25 +18,32 @@ export const exerciseNineHtml = () => {
             <div class="card-body" >
               <form id="my-form">
                 <div class="input-group mt-3">
-                  <span class="input-group-text">Digite a duração em segundos: </span>
+                  <span class="input-group-text">Informe um número de até dois dígitos: </span>
                   <input
-                    id="time_in_seconds"
-                    type="number"
-                    min="0"
+                    id="number"
+                    type="text"
                     class="form-control"
-                    placeholder="0"
+                    maxlength="2"
                   />
                 </div>
-                <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
+                <div class="mt-3 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
                   <button type="reset" class="btn btn-danger" value="Limpar"> Limpar </button>
-                  <button type="BUTTON" class="btn btn-primary" value="ex9Enviar">Enviar</button>
+                  <button type="button" class="btn btn-primary" value="ex30Enviar">Enviar</button>
                 </div>
               </form>
             </div>
             <div class="card-footer text-body-secondary text-center">
-                <h1 id="ex9Message"></h1>
+                <div class="input-group">
+                    <span class="input-group-text">Número por extenso: </span>
+                    <input
+                    id="inFull"
+                    type="text"
+                    class="form-control"
+                    disabled
+                    />
+                </div>
             </div>
           </div>
     `
     main.innerHTML = contentHtml;
-  }
+}

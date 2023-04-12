@@ -1,14 +1,14 @@
-export const exerciseThirteenHtml = () => {
+export const exerciseTwentySixHtml = () => {
     const main = document.getElementById('root');
     const contentHtml = `
         <div class="container mt-3 w-50">
           <div class="card">
             <div class="card-header">
-              <h5 class="card-title">Exercício 13</h5>
+              <h5 class="card-title">Exercício 26</h5>
             </div>
             <div class="card-body">
               <p class="card-text ">
-                  Uma operadora de telefonia cobra R$ 50.00 por um plano básico que dá direito a 100 minutos de telefone. Cada minuto que exceder a franquia de 100 minutos custa R$ 2.00. Fazer um programa para ler a quantidade de minutos que uma pessoa consumiu, daí mostrar o valor a ser pago.
+                  Fazer um programa para receber uma palavra (string); Calcular a quantidade de vogais e a quantidade consoantes da palavra; Exibir os valores calculados.
               </p>
             </div>
           </div>
@@ -18,31 +18,35 @@ export const exerciseThirteenHtml = () => {
             <div class="card-body" >
               <form id="my-form">
                 <div class="input-group mt-3">
-                  <span class="input-group-text">Quantidade de Minutos: </span>
+                  <span class="input-group-text">Digite uma palavra: </span>
                   <input
-                    id="spent_minutes"
-                    type="number"
-                    min="0"
+                    id="word"
+                    type="text"
                     class="form-control"
-                    placeholder="0"
                   />
                 </div>
-                <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
+                <div class="mt-3 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
                   <button type="reset" class="btn btn-danger" value="Limpar"> Limpar </button>
-                  <button type="button" class="btn btn-primary" value="ex13Enviar">Enviar</button>
+                  <button type="button" class="btn btn-primary" value="ex26Enviar">Enviar</button>
                 </div>
               </form>
             </div>
             <div class="card-footer text-body-secondary text-center">
                 <div class="input-group">
-                    <span class="input-group-text">Valor a pagar R$: </span>
+                    <span class="input-group-text">Vogais </span>
                     <input
-                    id="total_value"
-                    type="number"
-                    min="0"
-                    step=".01"
+                    id="vowels"
+                    type="text"
                     class="form-control"
-                    placeholder="0.00"
+                    disabled
+                    />
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Consoantes </span>
+                    <input
+                    id="consonants"
+                    type="text"
+                    class="form-control"
                     disabled
                     />
                 </div>
@@ -50,4 +54,4 @@ export const exerciseThirteenHtml = () => {
           </div>
     `
     main.innerHTML = contentHtml;
-  }
+}

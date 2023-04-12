@@ -5,16 +5,15 @@ export const ExerciseEightComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex8Enviar') {
-            const measureA = Number(document.getElementById('measure_A').value);
-            const measureB = Number(document.getElementById('measure_B').value);
-            const measureC = Number(document.getElementById('measure_C').value);
-            if(measureA == '' || measureB == '' || measureC == ''){
+            const measureA = parseFloat(document.getElementById('measure_A').value);
+            const measureB = parseFloat(document.getElementById('measure_B').value);
+            const measureC = parseFloat(document.getElementById('measure_C').value);
+            if(Number.isNaN(measureA) || Number.isNaN(measureB) || Number.isNaN(measureC)){
                 alert('Todos os dados devem ser preenchidos');
                 return;
             }

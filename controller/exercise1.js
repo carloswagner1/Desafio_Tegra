@@ -6,17 +6,16 @@ export const ExerciseOneComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex1Enviar'){
-            const landWidth = Number(document.getElementById('land_width').value);
-            const landLength = Number(document.getElementById('land_length').value);
-            const priceSquareMeter = document.getElementById('square_meter_value').value;
+            const landWidth = parseFloat(document.getElementById('land_width').value);
+            const landLength = parseFloat(document.getElementById('land_length').value);
+            const priceSquareMeter = parseFloat(document.getElementById('square_meter_value').value);
 
-            if(landLength == '' || landWidth == '' || priceSquareMeter == ''){
+            if(Number.isNaN(landLength) || Number.isNaN(landWidth) || Number.isNaN(priceSquareMeter) ){
                 alert('Todos os campos devem ser preenchidos');
                 return;
             }

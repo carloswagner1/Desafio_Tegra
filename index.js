@@ -22,6 +22,14 @@ import { ExerciseTwentyOneComponent } from "./controller/exercise21.js";
 import { ExerciseTwentyTwoComponent } from "./controller/exercise22.js";
 import { ExerciseTwentyThreeComponent } from "./controller/exercise23.js";
 import { ExerciseTwentyFourComponent } from "./controller/exercise24.js";
+import { ExerciseTwentyFiveComponent } from "./controller/exercise25.js";
+import { ExerciseTwentySixComponent } from "./controller/exercise26.js";
+import { ExerciseTwentySevenComponent } from "./controller/exercise27.js";
+import { ExerciseTwentyEightComponent } from "./controller/exercise28.js";
+import { ExerciseTwentyNineComponent } from "./controller/exercise29.js";
+import { ExerciseThirtyComponent } from "./controller/exercise30.js";
+import { AboutComponent } from "./controller/about.js";
+import { HomeComponent } from "./controller/home.js";
 
 
 const link = document.getElementById('link');
@@ -101,6 +109,31 @@ link.addEventListener('click', (event) => {
             break;
         case 'Exercício 24':
             ExerciseTwentyFourComponent();
+            break;
+        case 'Exercício 25':
+            ExerciseTwentyFiveComponent();
+            break;
+        case 'Exercício 26':
+            ExerciseTwentySixComponent();
+            break;
+        case 'Exercício 27':
+            ExerciseTwentySevenComponent();
+            break;
+        case 'Exercício 28':
+            ExerciseTwentyEightComponent();
+            break;
+        case 'Exercício 29':
+            ExerciseTwentyNineComponent();
+            break;
+        case 'Exercício 30':
+            ExerciseThirtyComponent();
+            break;
+        case 'Sobre o desafio':
+            AboutComponent();
+            break;
+        case 'Home':
+            HomeComponent();
+            break;
     }
 })
 

@@ -5,16 +5,15 @@ export const ExerciseSixComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex6Enviar') {
             const employeeName = document.getElementById('employeeName').value;
-            const hourSalary = document.getElementById('hourSalary').value;
-            const amountHours = document.getElementById('amountHours').value;
-            if(employeeName == '' || hourSalary == '' || amountHours==''){
+            const hourSalary = parseFloat(document.getElementById('hourSalary').value);
+            const amountHours = parseInt(document.getElementById('amountHours').value);
+            if(!employeeName || Number.isNaN(hourSalary) || Number.isNaN(amountHours) ){
                 alert('Todos os dados devem ser preenchidos');
                 return;
             }

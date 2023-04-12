@@ -5,7 +5,6 @@ export const ExerciseTwentyComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
@@ -17,7 +16,7 @@ export const ExerciseTwentyComponent = () => {
             const message = document.getElementById('message');
             var soma = 0;
 
-            if(!number1 || !number2){
+            if(Number.isNaN(number1) || Number.isNaN(number2)){
                 alert('Todos os campos devem ser informados');
                 return;
             }

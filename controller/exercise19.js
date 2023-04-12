@@ -10,15 +10,12 @@ export const ExerciseNineTeenComponent = () => {
     main.addEventListener('click', (event) => {
         const button = event.composedPath()[0].value;
 
-
-
-
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex19Enviar') {
             const salary = parseFloat(document.getElementById('salary').value);
-            if(!salary){
+            if(Number.isNaN(salary)){
                 alert('Informe o salário do funcionário');
                 return;
             }

@@ -5,17 +5,16 @@ export const ExerciseFourteenComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex14Enviar') {
-            const unitValue = document.getElementById('unit_value').value;
-            const amount = document.getElementById('amount').value;
-            const amountReceived = document.getElementById('amount_received').value;
+            const unitValue = parseFloat(document.getElementById('unit_value').value);
+            const amount = parseInt(document.getElementById('amount').value);
+            const amountReceived = parseFloat(document.getElementById('amount_received').value);
             const money_back = document.getElementById('money_back');
-            if(!unitValue || !amount || !amountReceived ){
+            if(Number.isNaN(unitValue) || Number.isNaN(amount) || Number.isNaN(amountReceived) ){
                 alert('Todos os campos devem ser preenchidos');
                 return;
             }

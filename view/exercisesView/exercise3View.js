@@ -8,7 +8,7 @@ export const exerciseThreeHtml = () => {
             </div>
             <div class="card-body">
               <p class="card-text">
-              Fazer um programa para ler o nome e idade de duas pessoas. Ao final mostrar uma mensagem com os nomes e a idade média entre essas pessoas, com uma casa decimal.
+                Fazer um programa para ler o nome e idade de duas pessoas. Ao final mostrar uma mensagem com os nomes e a idade média entre essas pessoas, com uma casa decimal.
               </p>
             </div>
           </div>
@@ -53,7 +53,7 @@ export const exerciseThreeHtml = () => {
                 </div>
                 <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
                   <button type="reset" class="btn btn-danger" value="Limpar"> Limpar </button>
-                  <button type="submit" class="btn btn-primary" value="ex3Enviar">Enviar</button>
+                  <button type="button" class="btn btn-primary" value="ex3Enviar">Enviar</button>
                 </div>
               </form>
             </div>

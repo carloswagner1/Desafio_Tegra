@@ -5,15 +5,14 @@ export const ExerciseFifteenComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         const classification = document.getElementById('classification');
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex15Enviar') {
-            const glucose = document.getElementById('glucose').value;
-            if(!glucose){
+            const glucose = parseFloat(document.getElementById('glucose').value);
+            if(Number.isNaN(glucose)){
                 alert('Informe a medida da glicose a ser pesquisada');
                 return;
             }

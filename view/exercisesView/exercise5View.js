@@ -30,7 +30,7 @@ export const exerciseFiveHtml = () => {
               </div>
               <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
                 <button type="reset" class="btn btn-danger" value="Limpar"> Limpar </button>
-                <button type="submit" class="btn btn-primary" value="ex5Enviar">Enviar</button>
+                <button type="button" class="btn btn-primary" value="ex5Enviar">Enviar</button>
               </div>
             </form>
           </div>

@@ -48,7 +48,7 @@ export const exerciseFifteenHtml = () => {
                 </div>
                 <div class="mt-3 d-grid gap-2 d-md-flex justify-content-md-end" id="buttons" >
                   <button type="reset" class="btn btn-danger" value="Limpar"> Limpar </button>
-                  <button type="submit" class="btn btn-primary" value="ex15Enviar">Enviar</button>
+                  <button type="button" class="btn btn-primary" value="ex15Enviar">Enviar</button>
                 </div>
               </form>
             </div>

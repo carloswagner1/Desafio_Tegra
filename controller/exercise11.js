@@ -5,15 +5,14 @@ export const ExerciseElevenComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex11Enviar') {
-            const firstgrade = Number(document.getElementById('first_grade').value);
-            const secondGrade = Number(document.getElementById('second_grade').value);
-            if(firstgrade == '' || secondGrade == ''){
+            const firstgrade = parseFloat(document.getElementById('first_grade').value);
+            const secondGrade = parseFloat(document.getElementById('second_grade').value);
+            if(Number.isNaN(firstgrade) || Number.isNaN(secondGrade)){
                 alert('Todos os valores devem ser informados');
                 return;
             }

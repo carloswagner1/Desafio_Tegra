@@ -1,11 +1,14 @@
 body {
     min-height: 100vh;
-    background-image: url('./assets/images/wallpaper.jpg');
+    background-image: url('../images/wallpaper.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 p {
+    text-align: justify;
+}
+li {
     text-align: justify;
 }
 .navbar-nav .dropdown-menu {

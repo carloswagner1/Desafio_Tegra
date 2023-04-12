@@ -5,15 +5,14 @@ export const ExerciseTenComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex10Enviar') {
-            const value1 = document.getElementById('value_1').value;
-            const value2 = document.getElementById('value_2').value;
-            const value3 = document.getElementById('value_3').value;
+            const value1 = parseInt(document.getElementById('value_1').value);
+            const value2 = parseInt(document.getElementById('value_2').value);
+            const value3 = parseInt(document.getElementById('value_3').value);
             if(!value1 || !value2 || !value3  ){
                 alert('Todos os valores devem ser informados');
                 return;

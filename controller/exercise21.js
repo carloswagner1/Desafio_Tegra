@@ -6,7 +6,6 @@ export const ExerciseTwentyOneComponent = () => {
     const cardFooter = document.getElementById('card-footer');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
@@ -17,7 +16,7 @@ export const ExerciseTwentyOneComponent = () => {
             const number1 = parseInt(form.number1.value);
             cardFooter.innerHTML = '';
 
-            if(!number1){
+            if(Number.isNaN(number1)){
                 alert('Informe o valor de X');
                 return;
             }

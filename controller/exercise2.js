@@ -6,16 +6,15 @@ export const ExerciseTwoComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex2Enviar'){
-            const rectangleBase = Number(document.getElementById('rectangle_base').value);
-            const rectangleHeight = Number(document.getElementById('rectangle_height').value);
-            if(rectangleBase ==  '' || rectangleHeight == ''){
-                alert("Todos os campos tem q ser preenchidos");
+            const rectangleBase = parseFloat(document.getElementById('rectangle_base').value);
+            const rectangleHeight = parseFloat(document.getElementById('rectangle_height').value);
+            if(Number.isNaN(rectangleBase) || Number.isNaN(rectangleHeight)){
+                alert("Todos os campos tem que ser preenchidos e diferentes de zero");
                 return;
             }
 

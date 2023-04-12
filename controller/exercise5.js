@@ -5,14 +5,13 @@ export const ExerciseFiveComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].innerText;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'Enviar') {
-            const circleRadius = document.getElementById('circle_radius').value;
-            if(circleRadius == ''){
+            const circleRadius = parseFloat(document.getElementById('circle_radius').value);
+            if(Number.isNaN(circleRadius)){
                 alert('Informe o valor do raio do círculo');
                 return;
             }

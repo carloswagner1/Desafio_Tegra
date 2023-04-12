@@ -5,14 +5,13 @@ export const ExerciseNineComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex9Enviar') {
-            const timeInSeconds = Number(document.getElementById('time_in_seconds').value);
-            if(timeInSeconds == '' ){
+            const timeInSeconds = parseInt(document.getElementById('time_in_seconds').value);
+            if(Number.isNaN(timeInSeconds)){
                 alert('Informe o tempo em segundos no campo indicado');
                 return;
             }

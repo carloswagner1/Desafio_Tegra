@@ -6,16 +6,15 @@ export const ExerciseSixteenComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex16Enviar') {
-            const attempt1 = document.getElementById('attempt_1').value;
-            const attempt2 = document.getElementById('attempt_2').value;
-            const attempt3 = document.getElementById('attempt_3').value;
-            if(!attempt1 || !attempt2 || !attempt3  ){
+            const attempt1 = parseFloat(document.getElementById('attempt_1').value);
+            const attempt2 = parseFloat(document.getElementById('attempt_2').value);
+            const attempt3 = parseFloat(document.getElementById('attempt_3').value);
+            if(Number.isNaN(attempt1) || Number.isNaN(attempt2) || Number.isNaN(attempt3) ){
                 alert('Todos os valores devem ser informados');
                 return;
             }

@@ -5,16 +5,15 @@ export const ExerciseSevenComponent = () => {
     const main = document.getElementById('root');
 
     main.addEventListener('click', (event) => {
-        event.preventDefault();
         const button = event.composedPath()[0].value;
         if( button == 'Limpar'){
             clear();
         }
         if( button == 'ex7Enviar') {
-            const travelledDistance = document.getElementById('travelled_distance').value;
-            const spentFuel = document.getElementById('spent_fuel').value;
-            if(travelledDistance == '' || spentFuel == ''){
-                alert('Todos os dados devem ser preenchidos');
+            const travelledDistance = parseInt(document.getElementById('travelled_distance').value);
+            const spentFuel = parseFloat(document.getElementById('spent_fuel').value);
+            if(!travelledDistance || !spentFuel ){
+                alert('Todos os dados devem ser preenchidos e diferentes de zero');
                 return;
             }
             const averageConsumption = travelledDistance/spentFuel;
